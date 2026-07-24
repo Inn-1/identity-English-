@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>On Identity — A Digital Anthology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="progress-rail" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+
+<nav class="topnav" aria-label="Anthology sections">
+  <a href="#home" class="brand">On Identity</a>
+  <ul class="navlinks">
+    <li><a href="#theme" data-section="theme">Theme</a></li>
+    <li><a href="#collection" data-section="collection">Collection</a></li>
+    <li><a href="#readings" data-section="readings">Readings</a></li>
+    <li><a href="#listen" data-section="listen">Listen</a></li>
+    <li><a href="#bibliography" data-section="bibliography">Bibliography</a></li>
+    <li><a href="#reflection" data-section="reflection">Reflection</a></li>
+  </ul>
+  <button class="mask-toggle" id="maskToggle" aria-pressed="false">
+    <svg viewBox="0 0 100 100" class="mark" aria-hidden="true">
+      <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="4"/>
+      <line x1="50" y1="12" x2="50" y2="88" stroke="currentColor" stroke-width="3" stroke-dasharray="5 6"/>
+      <circle cx="36" cy="44" r="5" fill="currentColor"/>
+      <circle cx="64" cy="44" r="5" fill="none" stroke="currentColor" stroke-width="3"/>
+    </svg>
+    <span id="maskLabel">Mask off</span>
+  </button>
+</nav>
+
+<main>
+
+  <!-- ================= HOME ================= -->
+  <section id="home" class="hero">
+    <p class="eyebrow">A Digital Anthology · Grade 11</p>
+    <h1 class="display">On <em>Identity</em></h1>
+    <p class="hero-sub">Five texts, three expanded past summary into close reading and evidence, and one recorded conversation about who we are, and who we're allowed to be.</p>
+    <a href="#theme" class="scroll-cue" aria-label="Scroll to next section">
+      <span>Begin reading</span>
+      <svg width="13" height="20" viewBox="0 0 14 22" fill="none"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ================= THEME ================= -->
+  <section id="theme" class="block block-narrow reveal">
+    <blockquote class="epigraph">
+      Who am I? may be the most fundamental question a person can ask, and one that never entirely resolves.
+      <cite>Simply Psychology, “Identity Exploration Psychology”</cite>
+    </blockquote>
+    <div class="theme-copy">
+      <p class="drop">This anthology gathers five texts, a short story, a poem, a personal essay, a podcast episode, and an article, that each treat identity differently. Some show it being quietly erased. Others show it being protected at a real cost, or built out of whatever is left over after history gets in the way.</p>
+      <p>None of them treat identity as something stable that just sits there, waiting to be found. Three of these five texts get a full, expanded reading further down the page, and those same three are also discussed aloud in a recorded conversation, in my own voice, further down. Every text below includes a short excerpt and a direct link to the original source.</p>
+    </div>
+  </section>
+
+  <!-- ================= COLLECTION ================= -->
+  <section id="collection" class="block block-wide reveal">
+    <h2 class="section-title"><span class="section-num">02</span>The Collection</h2>
+    <p class="section-lede">Five texts, a mix of fiction and nonfiction, in five different media.</p>
+
+    <div class="dossier">
+
+      <div class="dossier-row">
+        <span class="d-num">01</span>
+        <div class="d-thumb"><img src="the story of hour.png" alt="Woman at a window, the painting used to illustrate The Story of an Hour" loading="lazy"></div>
+        <div class="d-main">
+          <span class="tag tag-fiction">Fiction · Short Story</span>
+          <h3>The Story of an Hour</h3>
+          <p class="author">Kate Chopin, 1894</p>
+          <p class="excerpt">“She said it over and over under her breath: ‘free, free, free!’”</p>
+        </div>
+        <div class="d-side">
+          <a class="source-btn" href="https://americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour" target="_blank" rel="noopener">Read the source ↗</a>
+          <a class="jump-link" href="#reading-chopin">Full analysis below ↓</a>
+          <p class="d-note">Chopin never makes Brently Mallard cruel, which is exactly what makes this story unsettling. Louise's identity has been quietly absorbed into the role of “wife,” so completely that even a kind marriage still means living under someone else's will.</p>
+        </div>
+      </div>
+
+      <div class="dossier-row">
+        <span class="d-num">02</span>
+        <div class="d-thumb"><img src="poem.png" alt="Portrait of Paul Laurence Dunbar" loading="lazy"></div>
+        <div class="d-main">
+          <span class="tag tag-fiction">Fiction · Poem</span>
+          <h3>We Wear the Mask</h3>
+          <p class="author">Paul Laurence Dunbar, 1895</p>
+          <p class="excerpt">“We wear the mask that grins and lies, / it hides our cheeks and shades our eyes…”</p>
+        </div>
+        <div class="d-side">
+          <a class="source-btn" href="https://www.poetryfoundation.org/poems/44203/we-wear-the-mask" target="_blank" rel="noopener">Read the source ↗</a>
+          <a class="jump-link" href="#reading-dunbar">Full analysis below ↓</a>
+          <p class="d-note">Written as a rondeau, the poem traps itself in its own opening line, mirroring how its speaker is trapped performing a mask he didn't choose to owe.</p>
+        </div>
+      </div>
+
+      <div class="dossier-row">
+        <span class="d-num">03</span>
+        <div class="d-thumb"><img src="rice for thanksgiving.png" alt="Photo of essayist Jocelyn Fong" loading="lazy"></div>
+        <div class="d-main">
+          <span class="tag tag-nonfiction">Nonfiction · Personal Essay</span>
+          <h3>Rice for Thanksgiving</h3>
+          <p class="author">Jocelyn Fong, This I Believe</p>
+          <p class="excerpt">“I believe in rice and gravy because I am rice and gravy.”</p>
+        </div>
+        <div class="d-side">
+          <a class="source-btn" href="https://thisibelieve.org/essay/24145/" target="_blank" rel="noopener">Read the source ↗</a>
+          <a class="jump-link" href="#reading-fong">Full analysis below ↓</a>
+          <p class="d-note">Fong isn't reclaiming a lost tradition, her family's history was interrupted by immigration law and policy. What she builds instead is invented, not inherited.</p>
+        </div>
+      </div>
+
+      <div class="dossier-row">
+        <span class="d-num">04</span>
+        <div class="d-thumb"><img src="lost in translation.png" alt="A family sitting together, from the Code Switch episode" loading="lazy"></div>
+        <div class="d-main">
+          <span class="tag tag-nonfiction">Nonfiction · Podcast Episode</span>
+          <h3>Lost in Translation</h3>
+          <p class="author">Code Switch, NPR, 2022</p>
+          <p class="excerpt">Two families navigating identity through the languages available, or unavailable, to them.</p>
+        </div>
+        <div class="d-side">
+          <a class="source-btn" href="https://www.npr.org/2022/08/02/1115176145/lost-in-translation" target="_blank" rel="noopener">Read the source ↗</a>
+          <p class="d-note">One story follows a young man coming out to his Mandarin speaking parents, in a language where spoken “he” and “she” sound identical.</p>
+        </div>
+      </div>
+
+      <div class="dossier-row">
+        <span class="d-num">05</span>
+        <div class="d-thumb"><img src="identity in psycology.png" alt="Portrait of psychologist Erik Erikson" loading="lazy"></div>
+        <div class="d-main">
+          <span class="tag tag-nonfiction">Nonfiction · Article</span>
+          <h3>Identity Exploration Psychology</h3>
+          <p class="author">Simply Psychology, 2026</p>
+          <p class="excerpt">“Who am I? may be the most fundamental question a person can ask.”</p>
+        </div>
+        <div class="d-side">
+          <a class="source-btn" href="https://www.simplypsychology.com/articles/identity-exploration-psychology" target="_blank" rel="noopener">Read the source ↗</a>
+          <p class="d-note">This article explains identity through Erikson's theory and Marcia's four identity statuses, a framework the other four texts can be read against.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= DEEPER READINGS ================= -->
+  <div id="readings">
+
+    <section class="block reveal" style="padding-bottom:0;">
+      <h2 class="section-title"><span class="section-num">03</span>Deeper Readings</h2>
+      <p class="section-lede">Three of the five texts, expanded past summary and into close reading, evidence, and argument.</p>
+    </section>
+
+    <article id="reading-chopin" class="reading reveal">
+      <div class="reading-inner">
+        <div class="reading-img"><img src="the story of hour.png" alt="Woman at a window, the painting used to illustrate The Story of an Hour" loading="lazy"></div>
+        <header class="reading-head">
+          <span class="tag tag-fiction r-tag">Short Story</span>
+          <h3>The Story of an Hour</h3>
+          <p class="author-line">Kate Chopin · <a href="https://americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour" target="_blank" rel="noopener">americanliterature.com ↗</a></p>
+        </header>
+        <div class="reading-body">
+          <p>When Chopin first published this story in <em>Vogue</em> in December 1894, she titled it “The Dream of an Hour.” She changed it to “The Story of an Hour” before it was republished the following year, and that small edit says something about what she wanted the ending to mean. A dream can be dismissed as unreal, something that dissolves the moment a person wakes up. A story is a sequence of events that actually happened. By choosing “story,” Chopin insists that whatever Louise Mallard experiences in that room, however brief, was not a delusion. It was real.</p>
+          <p>The scene where Louise recognizes her own freedom is staged with unusual care. She sits in an armchair facing an open window, and everything coming through it belongs to the language of rebirth: treetops “aquiver with the new spring life,” the “delicious breath of rain,” patches of blue sky breaking through storm clouds. None of this imagery has anything to do with her husband's death directly. Chopin is separating Louise's private revelation from any single external cause. The window becomes a threshold between two identities: the domestic one she has occupied for years, and the one she is only now allowed to glimpse.</p>
+          <blockquote class="pull">A kind intention or a cruel intention made the act seem no less a crime.</blockquote>
+          <p>Chopin is careful to show Louise resisting what she feels before she accepts it. “She did not stop to ask if it were or were not a monstrous joy that held her,” Chopin writes, and that word, monstrous, is doing real work. It tells us Louise has already absorbed the idea that a wife feeling free at her husband's death would be a moral failure. It would be easy to read this story as being specifically about the unfairness of nineteenth century marriage law, and it is that. But Chopin pushes further, toward a general theory of how identity gets erased: she writes that any imposed “private will,” kind or cruel, is “no less a crime.”</p>
+          <p>The final scene confirms how invisible Louise's inner life was to everyone around her. She comes down the stairs looking, in Chopin's words, “like a goddess of Victory,” carrying a version of herself nobody in the house has ever seen. Then Brently walks in, alive, and Louise dies instantly. The doctors' verdict, “the joy that kills,” is the cruelest misreading in a story full of misreadings. Nobody considers that what actually stopped her heart was the sudden, total loss of the one hour in her adult life when she got to exist as someone other than his wife.</p>
+          <a class="source-btn reading-source" href="https://americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour" target="_blank" rel="noopener">Read the full text ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article id="reading-dunbar" class="reading reveal">
+      <div class="reading-inner">
+        <div class="reading-img"><img src="poem.png" alt="Portrait of Paul Laurence Dunbar" loading="lazy"></div>
+        <header class="reading-head">
+          <span class="tag tag-fiction r-tag">Poem</span>
+          <h3>We Wear the Mask</h3>
+          <p class="author-line">Paul Laurence Dunbar · <a href="https://www.poetryfoundation.org/poems/44203/we-wear-the-mask" target="_blank" rel="noopener">poetryfoundation.org ↗</a></p>
+        </header>
+        <div class="reading-body">
+          <div class="poem-block">
+            <p>We wear the mask that grins and lies,<br>It hides our cheeks and shades our eyes,<br>This debt we pay to human guile;<br>With torn and bleeding hearts we smile,<br>And mouth with myriad subtleties.</p>
+            <p>Why should the world be over-wise,<br>In counting all our tears and sighs?<br>Nay, let them only see us, while<br>We wear the mask.</p>
+            <p>We smile, but, O great Christ, our cries<br>To thee from tortured souls arise.<br>We sing, but oh the clay is vile<br>Beneath our feet, and long the mile;<br>But let the world dream otherwise,<br>We wear the mask!</p>
+          </div>
+          <p>The word that changes how this poem reads is in the first stanza: “debt.” Dunbar writes, “this debt we pay to human guile.” A debt isn't something a person chooses, it's something owed. That distinction matters, because it means the mask isn't simply clever protection the speaker invented for himself. It's a cost, imposed by a world that would use his real feelings against him if he let them show.</p>
+          <p>The poem is written as a rondeau, where the opening line returns at least twice more before it ends. By the middle stanza, the speaker is crying out to God about “tortured souls,” about as far from a grinning mask as language gets. And yet the poem still returns to “we wear the mask” by the end. Every time that line comes back, it feels like the speaker can never fully escape the role he has to perform.</p>
+          <blockquote class="pull">Nay, let them only see us, while we wear the mask.</blockquote>
+          <p>There is historical weight here too. Dunbar was writing in 1895, right as Reconstruction was collapsing into Jim Crow. For a Black man in that period, controlling what emotional information you gave to a hostile public wasn't weakness, it was survival. So the mask isn't only a symbol of hidden pain. It functions more like a strategy: the identity underneath hasn't disappeared, it's being deliberately withheld from people who haven't earned the right to see it.</p>
+          <a class="source-btn reading-source" href="https://www.poetryfoundation.org/poems/44203/we-wear-the-mask" target="_blank" rel="noopener">Read the full poem ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article id="reading-fong" class="reading reveal">
+      <div class="reading-inner">
+        <div class="reading-img"><img src="rice for thanksgiving.png" alt="Photo of essayist Jocelyn Fong" loading="lazy"></div>
+        <header class="reading-head">
+          <span class="tag tag-nonfiction r-tag">Personal Essay</span>
+          <h3>Rice for Thanksgiving</h3>
+          <p class="author-line">Jocelyn Fong · <a href="https://thisibelieve.org/essay/24145/" target="_blank" rel="noopener">thisibelieve.org ↗</a></p>
+        </header>
+        <div class="reading-body">
+          <p>Fong opens with a detail that's easy to read past too quickly: her grandmother died of cancer four years before she wrote this, and that death is what actually ends the yearly gathering where this tradition used to happen. She is dealing with two losses stacked on top of each other: the historical loss of Chinese language and tradition in her family going back generations, and the much more recent, personal loss of the one relative who still held that shrunken inheritance together.</p>
+          <p>Her detail about checking the “Asian” box on government forms, even though she is “equally white,” is not a small aside. Until the 2000 United States Census, there was no option to select more than one race at all. Fong grew up inside that bureaucratic logic, where mixed identity wasn't officially recognized as something a person was allowed to claim.</p>
+          <blockquote class="pull">I believe in rice and gravy because I am rice and gravy.</blockquote>
+          <p>The essay's smartest move is the aside about the phrase “long time no see,” which Fong mentions came from a literal translation of a Chinese expression into English. That phrase isn't correct English, and it isn't Chinese anymore either. It exists because two languages collided and neither one fully absorbed the other. Fong is telling us, without saying it outright, that rice and gravy works the same way: not a compromise between two cultures, but a third thing, born from contact between them.</p>
+          <p>By the end, Fong stops talking only about her own family and makes a claim about the country itself, calling her mixed identity “a mark of progress... a collage of people with roots all over the planet, who, though not without strife, form something new and strong together.” That pattern, culture interrupted by policy and then reassembled into something unrecognized by either original source, is close to the actual mechanism by which American identity gets made in general.</p>
+          <a class="source-btn reading-source" href="https://thisibelieve.org/essay/24145/" target="_blank" rel="noopener">Read the full essay ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- ================= LISTEN ================= -->
+  <section id="listen" class="block block-narrow reveal">
+    <h2 class="section-title"><span class="section-num">04</span>Listen</h2>
+    <p class="section-lede">A recorded conversation covering the three expanded texts above, read and analyzed in my own voice.</p>
+    <div class="player-card">
+      <div class="player-meta">
+        <h3>Identity Anthology: Three Text Analyses</h3>
+        <p>“The Story of an Hour,” “We Wear the Mask,” and “Rice for Thanksgiving.” About 8 minutes.</p>
+      </div>
+      <audio class="audio-el" controls preload="metadata">
+        <source src="podcast-episode.mp3" type="audio/mpeg">
+        Your browser doesn't support embedded audio. You can download the file directly instead.
+      </audio>
+    </div>
+  </section>
+
+  <!-- ================= BIBLIOGRAPHY ================= -->
+  <section id="bibliography" class="block block-narrow reveal">
+    <h2 class="section-title"><span class="section-num">05</span>Annotated Bibliography</h2>
+
+    <ol class="bib-list">
+      <li>
+        <p class="bib-cite">Chopin, Kate. “The Story of an Hour.” <em>American Literature</em>, americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour. Accessed 22 July 2026.</p>
+        <p class="bib-note">“The Story of an Hour” works because Chopin never lets the ending resolve into something simple. Louise Mallard's identity is absorbed into the role of wife so completely that even a kind marriage means living under someone else's will, and her death at the story's end confirms that nobody around her ever saw her as separate from that role.</p>
+      </li>
+      <li>
+        <p class="bib-cite">Dunbar, Paul Laurence. “We Wear the Mask.” <em>Poetry Foundation</em>, www.poetryfoundation.org/poems/44203/we-wear-the-mask. Accessed 22 July 2026.</p>
+        <p class="bib-note">Written as a rondeau, the poem describes people performing an acceptable, cheerful version of themselves in public while their hearts are “torn and bleeding.” Read against Dunbar's own moment, 1895, as Reconstruction collapsed into Jim Crow, the mask becomes less about dishonesty and more about protection the speaker chose on purpose.</p>
+      </li>
+      <li>
+        <p class="bib-cite">Fong, Jocelyn. “Rice for Thanksgiving.” <em>This I Believe</em>, thisibelieve.org/essay/24145/. Accessed 22 July 2026.</p>
+        <p class="bib-note">Fong's mixed identity isn't inherited, it's invented, built from a family recipe that only exists because her family's Chinese and American histories were forced together by policy and circumstance. The essay argues identity isn't always something a person gets to choose freely.</p>
+      </li>
+      <li>
+        <p class="bib-cite">Meraji, Shereen Marisol, et al. “Lost in Translation.” <em>Code Switch</em>, NPR, 3 Aug. 2022, www.npr.org/2022/08/02/1115176145/lost-in-translation.</p>
+        <p class="bib-note">This episode follows two families navigating identity and language across generations. It argues that identity is shaped not only by what a person decides about themselves, but by whether the language available to them can actually hold the person they're trying to become.</p>
+      </li>
+      <li>
+        <p class="bib-cite">Simply Psychology Editorial Team. “Identity Exploration Psychology: Navigating the ‘Who Am I?’ Question.” <em>Simply Psychology</em>, 24 Apr. 2026, www.simplypsychology.com/articles/identity-exploration-psychology.</p>
+        <p class="bib-note">Through Erikson's theory and Marcia's four identity statuses, this article argues identity formation never really ends and gets triggered again by any major life change. It works as a framework the other four texts in this anthology can be read against.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= REFLECTION ================= -->
+  <section id="reflection" class="block block-narrow reveal">
+    <h2 class="section-title"><span class="section-num">06</span>Reflection</h2>
+    <div class="theme-copy">
+      <p class="drop">When I started building this anthology, I thought the design was the last thing I'd need to think hard about. It turned out to be one of the harder parts. My first version used a lot of color and a few interactive tricks, cards that flipped over, a shape that followed your cursor, a whole strip of tilted paper tags across the top. It looked busy, and once I sat with it, I realized busy wasn't actually saying anything true about the texts underneath it. The version I ended up keeping uses one quiet color, one serif font for headings and one plain sans font for everything else, and a single background straight through instead of switching colors every section. I think that restraint actually fits the theme better than the noisier version did. Almost every text in this collection is about identity showing up quietly, in a marriage nobody would call cruel, in a mask nobody's forcing you to wear, in a family recipe instead of a dramatic reunion with a lost culture. A loud, decorated site would have worked against that argument instead of for it.</p>
+      <p>The conventions matter here too, maybe more than I expected. Getting the MLA citations exactly right, keeping the punctuation inside quotation marks consistent, not letting a typo slip into a pull quote, these aren't just rules I'm following to avoid losing marks. They're part of how a reader decides whether to trust what I'm arguing. If I'm going to claim that a single word like “debt” changes how an entire Dunbar poem should be read, I need the rest of the page to look like it was actually proofread, or that specific claim stops looking careful and starts looking like a guess.</p>
+      <p>If I had to point to the place where my own voice comes through the strongest, it's probably the podcast script, specifically the moments where I catch myself mid-thought. There's a line in the Dunbar section where I say I mostly noticed the mask at first, and it wasn't until a second read that the word “debt” actually stood out to me. That's not something I would have written if I were trying to sound impressive. It's just what actually happened when I reread the poem, and I think that honesty reads as more mine than any of the more polished sentences around it.</p>
+      <p>What I've actually taken from this project is that identity doesn't hold still long enough to just be discovered once. Louise Mallard loses hers so gradually inside a marriage that isn't even cruel that she doesn't notice until it's already gone. Dunbar's speaker keeps his by paying for it every single day, a debt, not a gift. Jocelyn Fong doesn't get hers back at all, she has to build a version of it out of a Thanksgiving side dish because the original one was interrupted before she was even born. None of those are the same story, but none of them let identity just sit there either. If this anthology argues one thing, it's that identity is something you keep having to do something about, not something you get to finish.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>An Identity Anthology, compiled by Inaaya Khan.</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

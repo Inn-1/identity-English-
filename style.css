@@ -1,0 +1,241 @@
+/* =====================================================================
+   ON IDENTITY — a digital anthology
+   Design: quiet editorial. One background, one accent color, careful
+   type hierarchy, generous whitespace. No color blocking, no cursor
+   effects, no rotated decoration.
+   ===================================================================== */
+
+:root{
+  --paper:  #faf7f1;
+  --ink:    #1c1a17;
+  --muted:  #6e6a62;
+  --accent: #7a3327;
+  --rule:   rgba(28,26,23,0.14);
+  --card:   #ffffff;
+
+  --font-display: "Newsreader", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+[data-theme="mask"]{
+  --paper: #14120f;
+  --ink:   #ece7dc;
+  --muted: #a89f8e;
+  --accent: #d98a72;
+  --rule:  rgba(236,231,220,0.16);
+  --card:  #1c1915;
+}
+
+*{ box-sizing: border-box; }
+::selection{ background: var(--accent); color: var(--paper); }
+:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  transition: background .4s ease, color .4s ease;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+/* ===================== PROGRESS RAIL ===================== */
+.progress-rail{ position: fixed; top:0; left:0; right:0; height:2px; z-index: 200; background: transparent; }
+.progress-fill{ height:100%; width:0%; background: var(--accent); }
+
+/* ===================== TOP NAV ===================== */
+.topnav{
+  position: sticky; top:0; z-index: 150;
+  display:flex; align-items:center; gap:36px;
+  padding: 22px 6vw; background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.brand{
+  font-family: var(--font-display); font-weight:500; font-style: italic; font-size: 1.2rem;
+  margin-right: auto;
+}
+.navlinks{ list-style:none; margin:0; padding:0; display:flex; gap:28px; }
+.navlinks a{
+  font-size: .85rem; letter-spacing:.01em; color: var(--muted);
+  padding-bottom: 3px; border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+.navlinks a:hover{ color: var(--ink); }
+.navlinks a.active{ color: var(--ink); border-color: var(--accent); }
+
+.mask-toggle{
+  display:flex; align-items:center; gap:7px;
+  background: none; border: 1px solid var(--rule); color: var(--muted);
+  padding: 7px 14px; border-radius: 999px;
+  font-family: var(--font-body); font-size: .78rem;
+  cursor: pointer; transition: color .2s ease, border-color .2s ease;
+}
+.mask-toggle:hover{ color: var(--ink); border-color: var(--ink); }
+.mask-toggle .mark{ width:14px; height:14px; }
+
+@media (max-width: 780px){
+  .topnav{ gap:18px; flex-wrap:wrap; }
+  .navlinks{ gap:16px; flex-wrap:wrap; order:3; width:100%; }
+}
+
+/* ===================== MAIN LAYOUT ===================== */
+.block{ padding: 100px 6vw; }
+.block-narrow{ max-width: 760px; margin: 0 auto; }
+.block-wide{ max-width: 1040px; margin: 0 auto; }
+
+.reveal{ opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in{ opacity:1; transform:none; }
+
+/* ===================== HERO ===================== */
+.hero{ padding: 160px 6vw 120px; max-width: 900px; }
+.eyebrow{
+  font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
+  margin: 0 0 24px;
+}
+.display{
+  font-family: var(--font-display); font-weight: 380; font-size: clamp(3rem, 7vw, 5.4rem);
+  line-height: 1.05; margin: 0 0 30px; letter-spacing: -.01em;
+}
+.display em{ font-style: italic; font-weight: 500; color: var(--accent); }
+.hero-sub{ font-size: 1.2rem; max-width: 46ch; color: var(--muted); margin: 0 0 44px; }
+.scroll-cue{
+  display:inline-flex; align-items:center; gap:9px;
+  font-size:.9rem; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 4px;
+}
+.scroll-cue svg{ transition: transform .2s ease; }
+.scroll-cue:hover svg{ transform: translateY(3px); }
+
+/* ===================== SECTION HEADERS ===================== */
+.section-title{
+  font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 3.6vw, 2.8rem);
+  margin: 0 0 16px;
+}
+.section-num{ color: var(--accent); font-family: var(--font-body); font-size: .9rem; font-weight:600; margin-right: 14px; letter-spacing:.02em; }
+.section-lede{ font-size: 1.08rem; max-width: 58ch; margin: 0 0 56px; color: var(--muted); }
+
+/* ===================== THEME / EPIGRAPH ===================== */
+.epigraph{
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: clamp(1.5rem, 2.6vw, 2rem); line-height:1.45; margin: 0 0 20px;
+  padding-left: 24px; border-left: 2px solid var(--accent);
+}
+.epigraph cite{ display:block; font-style: normal; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 20px; }
+.theme-copy p{ font-size: 1.1rem; max-width: 66ch; color: var(--muted); }
+.theme-copy p:first-child{ color: var(--ink); }
+.drop:first-letter{ font-family: var(--font-display); font-weight: 500; font-size: 3.4em; float:left; line-height: .84; padding-right: 10px; color: var(--accent); }
+
+/* ===================== COLLECTION — plain divided list ===================== */
+.dossier{ display:flex; flex-direction:column; }
+.dossier-row{
+  display:grid; grid-template-columns: 40px 92px 1.15fr 1fr; gap: 28px;
+  padding: 40px 0; border-top: 1px solid var(--rule);
+  align-items:start;
+}
+.dossier:first-child .dossier-row:first-child{ border-top: none; padding-top:0; }
+.d-num{ font-size: .85rem; color: var(--muted); padding-top:6px; }
+
+.d-thumb{ width: 92px; height: 92px; border-radius: 4px; overflow:hidden; background: var(--rule); flex-shrink:0; }
+.d-thumb img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  filter: grayscale(65%) sepia(6%) contrast(1.04);
+  transition: filter .3s ease;
+}
+.dossier-row:hover .d-thumb img{ filter:none; }
+
+.d-main h3{ font-family: var(--font-display); font-weight:500; font-size: clamp(1.4rem,2.6vw,1.8rem); margin: 8px 0 6px; }
+.d-main .author{ font-size:.82rem; color: var(--muted); margin: 0 0 14px; }
+.d-main .excerpt{ font-family: var(--font-display); font-style:italic; font-size: 1.08rem; color: var(--ink); opacity:.85; margin: 0; }
+
+.tag{
+  display:inline-block; font-size: .72rem; letter-spacing:.03em; color: var(--muted);
+  text-transform:uppercase;
+}
+.tag-fiction, .tag-nonfiction{ color: var(--accent); }
+
+.d-side{ display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
+.d-note{ font-size: .95rem; color: var(--muted); margin:0; }
+
+.source-btn{
+  display:inline-flex; align-items:center; gap:7px; color: var(--accent);
+  font-size:.88rem; font-weight:600; border-bottom: 1px solid var(--accent); padding-bottom:2px;
+  transition: opacity .2s ease;
+}
+.source-btn:hover{ opacity:.7; }
+
+.jump-link{ font-size:.82rem; color: var(--muted); border-bottom: 1px dotted var(--muted); }
+.jump-link:hover{ color: var(--ink); }
+
+@media (max-width: 720px){
+  .dossier-row{ grid-template-columns: 72px 1fr; gap:14px; }
+  .d-num{ display:none; }
+  .d-thumb{ width:72px; height:72px; grid-row: span 2; }
+  .d-side{ grid-column: 1 / -1; }
+}
+
+/* ===================== READINGS ===================== */
+.reading{ padding: 90px 6vw; border-top: 1px solid var(--rule); }
+.reading:first-of-type{ border-top:none; }
+.reading-inner{ max-width: 720px; margin:0 auto; }
+.reading-img{
+  width:100%; aspect-ratio: 16/7; border-radius: 4px; overflow:hidden;
+  margin: 0 0 36px; background: var(--rule);
+}
+.reading-img img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  filter: grayscale(55%) sepia(6%) contrast(1.05);
+}
+.reading-head{ margin-bottom: 30px; }
+.reading-head .r-tag{ margin-bottom: 14px; display:block; }
+.reading-head h3{ font-family: var(--font-display); font-weight:500; font-size: clamp(1.8rem,3.6vw,2.6rem); margin: 6px 0 12px; }
+.reading-head .author-line{ font-size: .88rem; color: var(--muted); }
+.reading-head .author-line a{ border-bottom: 1px solid var(--rule); }
+
+.reading-body p{ font-size: 1.08rem; margin: 0 0 24px; color: var(--muted); }
+.reading-body p:first-of-type{ color: var(--ink); }
+
+.pull{
+  font-family: var(--font-display); font-style: italic; font-size: 1.5rem; line-height:1.4;
+  color: var(--ink); margin: 44px auto; max-width: 42ch; text-align:center;
+  padding: 24px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+
+.poem-block{
+  border-left: 2px solid var(--accent); padding: 6px 0 6px 28px; margin: 0 0 36px;
+}
+.poem-block p{ font-family: var(--font-display); font-style: italic; font-size: 1.1rem; color: var(--ink); margin: 0 0 22px; line-height: 1.75; }
+.poem-block p:last-child{ margin-bottom:0; }
+
+.reading-source{ margin-top: 34px; display:inline-flex; }
+
+/* ===================== LISTEN ===================== */
+.player-card{ border: 1px solid var(--rule); border-radius: 4px; padding: 32px; margin-top: 12px; }
+.player-meta h3{ font-family: var(--font-display); font-weight:500; font-size:1.6rem; margin: 0 0 8px; }
+.player-meta p{ color: var(--muted); margin: 0 0 22px; }
+.audio-el{ width:100%; }
+
+/* ===================== BIBLIOGRAPHY ===================== */
+.bib-list{ list-style:none; margin:0; padding:0; }
+.bib-list li{ padding: 28px 0; border-top: 1px solid var(--rule); }
+.bib-list li:first-child{ border-top:none; padding-top:0; }
+.bib-cite{ margin: 0 0 10px; text-indent: -20px; padding-left: 20px; font-size: .96rem; }
+.bib-note{ margin:0; color: var(--muted); font-size: .95rem; }
+
+/* ===================== FOOTER ===================== */
+.site-footer{
+  padding: 44px 6vw 60px; max-width: 1040px; margin: 0 auto;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+  font-size: .85rem; color: var(--muted); border-top: 1px solid var(--rule);
+}
+.site-footer a{ border-bottom:1px solid var(--rule); }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 880px){
+  .block{ padding: 70px 5vw; }
+  .reading{ padding: 60px 5vw; }
+  .hero{ padding: 120px 5vw 80px; }
+}
